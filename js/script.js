@@ -195,3 +195,48 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+/* Text animation on scroll */
+gsap.registerPlugin(ScrollTrigger);
+
+const heading = document.getElementById("brand");
+const text = heading.textContent.trim();
+
+heading.innerHTML = "";
+
+text.split("").forEach(letter => {
+  const span = document.createElement("span");
+  span.innerHTML = letter === " " ? "&nbsp;" : letter;
+  heading.appendChild(span);
+});
+
+const tl = gsap.from("#brand span", {
+  yPercent: 100,          // Niche se upar aayega
+  opacity: 0,
+  duration: 1,
+  stagger: 0.05,
+  ease: "expo.out",       // Premium smooth easing
+  paused: true
+});
+
+ScrollTrigger.create({
+  trigger: "#brand",
+  start: "top 80%",
+  end: "bottom top",
+
+  onEnter: () => tl.restart(),
+  onEnterBack: () => tl.restart()
+});
+
+gsap.from(".side-nav-link", {
+    x: -60,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.15,
+    ease: "power4.out",
+    scrollTrigger: {
+        trigger: "#sideNav",
+        start: "top 80%",
+        toggleActions: "play none none reset"
+    }
+});
