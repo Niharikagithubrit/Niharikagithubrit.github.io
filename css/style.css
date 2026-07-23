@@ -1,5 +1,5 @@
 /* ============================================
-   TOKENS
+  TOKENS
    ============================================ */
 :root{
   --bg: #ffffff;
@@ -32,7 +32,7 @@ a{ text-decoration:none; color:inherit; }
 .accent-text{ color:var(--accent); font-style:normal; }
 
 /* ============================================
-   GRAIN + CURSOR GLOW
+  GRAIN + CURSOR GLOW
    ============================================ */
 .grain-overlay{
   position:fixed; inset:0; z-index:9998; pointer-events:none;
@@ -52,7 +52,7 @@ a{ text-decoration:none; color:inherit; }
   .cursor-glow{ opacity:1; }
 }
 /* ============================================
-   NAVBAR
+  NAVBAR
    ============================================ */
 .custom-navbar{
   background:transparent;
@@ -91,8 +91,8 @@ a{ text-decoration:none; color:inherit; }
 .navbar-toggler-icon-custom{ font-size:1.6rem; color:var(--text); }
 
 /* ============================================
-   DESKTOP LOGO + SIDE NAVIGATION DOCK
-   (replaces top navbar on large screens)
+  DESKTOP LOGO + SIDE NAVIGATION DOCK
+  (replaces top navbar on large screens)
    ============================================ */
 .desktop-logo{
   display:none;
@@ -151,7 +151,7 @@ a{ text-decoration:none; color:inherit; }
 }
 
 /* ============================================
-   HERO
+  HERO
    ============================================ */
 .hero-section{
   position:relative;
@@ -235,7 +235,7 @@ a{ text-decoration:none; color:inherit; }
 .hero-cta{ display:flex; gap:16px; flex-wrap:wrap; }
 
 /* ============================================
-   HERO VISUAL + RESUME DOWNLOAD BUTTON
+  HERO VISUAL + RESUME DOWNLOAD BUTTON
    ============================================ */
 .hero-visual{
   position:relative;
@@ -330,7 +330,7 @@ a{ text-decoration:none; color:inherit; }
 }
 
 /* ============================================
-   REVEAL ANIMATIONS
+  REVEAL ANIMATIONS
    ============================================ */
 .reveal-up{
   opacity:0;
@@ -358,7 +358,7 @@ a{ text-decoration:none; color:inherit; }
 }
 
 /* ============================================
-   TICKER
+  TICKER
    ============================================ */
 .ticker-section{
   border-top:1px solid var(--line);
@@ -383,7 +383,7 @@ a{ text-decoration:none; color:inherit; }
 }
 
 /* ============================================
-   SECTION SHARED
+  SECTION SHARED
    ============================================ */
 section{ padding:100px 0; position:relative; }
 .section-label{
@@ -401,7 +401,7 @@ section{ padding:100px 0; position:relative; }
 .body-text{ color:var(--muted); line-height:1.8; font-size:1rem; }
 
 /* ============================================
-   ABOUT
+  ABOUT
    ============================================ */
 .avatar-frame{
   position:relative;
@@ -423,8 +423,14 @@ section{ padding:100px 0; position:relative; }
   inset: 0;
   border: 1px dashed var(--line);
   border-radius: 16%;
-  animation: spinSlow 38s linear infinite;
+  animation: spinSlow 25s linear infinite;
   box-shadow: 0 20px 50px rgb(0 0 0 / 18%);
+}
+section#contact {
+    background-image: url("../assets/images/footerbackground.png");
+    background-repeat: no-repeat;
+    background-position: center 60%;
+    background-size: cover;
 }
 @keyframes spinSlow{ to{ transform:rotate(360deg); } }
 
@@ -440,7 +446,7 @@ section{ padding:100px 0; position:relative; }
 .chip:hover{ border-color:var(--accent); color:var(--text); }
 
 /* ============================================
-   EXPERIENCE / JOURNEY TIMELINE
+  EXPERIENCE / JOURNEY TIMELINE
    ============================================ */
 .experience-section{ background:var(--bg-alt); }
 
@@ -514,7 +520,7 @@ section{ padding:100px 0; position:relative; }
 }
 
 /* ============================================
-   WORK / PROJECTS — device mockup cards
+  WORK / PROJECTS — device mockup cards
    ============================================ */
 .device-card{
   background:#ffffff;
@@ -620,11 +626,12 @@ section{ padding:100px 0; position:relative; }
 .device-sub{ color:var(--muted); font-size:0.85rem; margin:0; }
 
 /* ============================================
-   PROJECTS SLIDER
+PROJECTS SLIDER
    ============================================ */
 .projects-slider{ margin-top:2.5rem; }
-.projects-slider-viewport{
-  overflow:hidden;
+.projects-slider-viewport {
+    overflow: hidden;
+    padding-top: 11px;
 }
 .projects-track{
   display:flex;
@@ -696,7 +703,7 @@ section{ padding:100px 0; position:relative; }
 }
 
 /* ============================================
-   PROCESS
+  PROCESS
    ============================================ */
 .process-section{ background:var(--bg-alt); overflow:hidden; }
 .layer-4{
@@ -733,7 +740,7 @@ section{ padding:100px 0; position:relative; }
 .stat-label{ color:var(--muted); font-size:0.85rem; margin-top:4px; }
 
 /* ============================================
-   CONTACT
+  CONTACT
    ============================================ */
 .big-cta{
   font-family:var(--font-display);
@@ -765,13 +772,13 @@ section{ padding:100px 0; position:relative; }
 .social-row a:hover{ color:#ffffff; background:var(--accent); border-color:var(--accent); transform:translateY(-3px); }
 
 /* ============================================
-   FOOTER
+  FOOTER
    ============================================ */
 .back-to-top{ display:inline-flex; align-items:center; gap:6px; transition:color .25s ease; }
 .back-to-top:hover{ color:var(--accent); }
 
 /* ============================================
-   RESPONSIVE
+  RESPONSIVE
    ============================================ */
 @media (max-width:991px){
   .custom-navbar{ background:rgba(255,255,255,0.97); backdrop-filter:blur(10px); }

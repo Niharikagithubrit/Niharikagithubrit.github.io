@@ -228,15 +228,19 @@ ScrollTrigger.create({
   onEnterBack: () => tl.restart()
 });
 
-gsap.from(".side-nav-link", {
+const sideTl = gsap.from(".side-nav-link", {
     x: -60,
     opacity: 0,
     duration: 0.8,
-    stagger: 0.15,
+    stagger: 0.12,
     ease: "power4.out",
-    scrollTrigger: {
-        trigger: "#sideNav",
-        start: "top 80%",
-        toggleActions: "play none none reset"
-    }
+    paused: true
+});
+
+ScrollTrigger.create({
+    trigger: "#sideNav",
+    start: "top 80%",
+
+    onEnter: () => sideTl.restart(),
+    onEnterBack: () => sideTl.restart()
 });
