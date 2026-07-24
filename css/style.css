@@ -260,8 +260,7 @@ a{ text-decoration:none; color:inherit; }
   justify-content: center;
   gap: 11px;
   text-align: center;
-  background: var(--accent);
-  color: #ffffff;
+  color: var(--accent);
   border-radius: 12px;
   font-family: var(--font-display);
   font-size: 0.96rem;
@@ -269,14 +268,11 @@ a{ text-decoration:none; color:inherit; }
   line-height: 2.25;
   text-transform: uppercase;
   letter-spacing: 0.6px;
-  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
-  transition: transform .3s ease, box-shadow .3s ease, background .3s ease;
+  transition: transform .3s ease;
 }
 .hero-resume-btn i{ font-size:1rem; }
 .hero-resume-btn:hover{
   transform:translateY(-4px);
-  box-shadow:0 18px 36px rgba(0,0,0,0.24);
-  color:#ffffff;
 }
 @media (max-width: 575.98px){
   .hero-resume-btn {
